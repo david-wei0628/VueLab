@@ -20,7 +20,7 @@ const vm2 = Vue.createApp({
 }).mount('#app2');
 
 const vm3 = Vue.createApp({
-    template: `<div>{{ greeting }} 好棒棒!</div>`,
+    template: `<br><div>{{ greeting }} 好棒棒!</div><br>`,
     data() {
         return {
             greeting: 'Hello Vue.js!'
