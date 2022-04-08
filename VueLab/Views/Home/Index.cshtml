@@ -4,8 +4,8 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
 <h2 style="font-size: 32px">
     <h3><div id="app2">
       <h4>Count: {{ count }}</h4>
@@ -31,11 +31,10 @@
           <p>
             <span>Multiline message is:</span> {{ message }}
           </p>
-         <textarea v-model="message" placeholder="add multiple lines"></textarea>
+         <textarea v-model.trim="message" placeholder="add multiple lines"></textarea>
     </div>
 
     <div id="app5">
-      <!-- 注意下面 input 對應的都是 v-model="checkedNames"  -->
       <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
       <label for="jack">Jack</label>
   
@@ -45,11 +44,12 @@
       <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
       <label for="mike">Mike</label>
   
-      <input type="checkbox" id="mary" value="Mary" v-model="checkedNames">
+      <input type="checkbox" id="mary" value="Mary" v-model.lazy="checkedNames">
       <label for="mary">Mary</label>
 
       <br>
       <p>Checked names: {{ checkedNames }}</p>
+
     </div>
 
     
