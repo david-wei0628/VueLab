@@ -12,7 +12,7 @@
 }).mount('#app');
 
 const vm2 = Vue.createApp({
-    data: () => {
+    data()  {
         return {
             count: 0
         }
@@ -27,3 +27,43 @@ const vm3 = Vue.createApp({
         }
     }
 }).mount('#app3');
+
+const vm4 = Vue.createApp({
+    data() {
+        return {
+            message: 'Hello'
+        }
+    }
+}).mount('#app4');
+
+const vm5 = Vue.createApp({
+    data() {
+        return {
+            checkedNames: []
+        }
+    }
+}).mount('#app5');
+
+const vm6 = Vue.createApp({
+    data() {
+        return {
+            msg: '外部'
+        }
+    }
+});
+
+vm6.component('my-component', {
+    template:`
+        <div class="component">
+            <div> props to parentMsg =>{{ parentMsg }}</div>
+            <div> my msg => {{ msg }}</div>
+        </div>`,
+    props: ["parentMsg"],
+    data: () => {
+        return {
+            msg: '子元件MSG'
+        }
+    }
+});
+
+vm6.mount('#app6');

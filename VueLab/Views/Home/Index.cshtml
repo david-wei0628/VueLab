@@ -6,21 +6,53 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<h2 style="font-size: 32px">
+    <h3><div id="app2">
+      <h4>Count: {{ count }}</h4>
+      <h5>
+          <button v-on:click="count++">Plus</button>
+          <button v-on:click="count = 0">Reset</button>
+      </h5>
+        <h4>
+          <div class="wrap" style="color :#fff;" >
+            <div v-if="count === 0" style="background-color: #f00;">Block A</div>
+            <div v-else-if="count < 5" style="background-color: green">Block B</div>
+            <div v-else-if="count < 15" style="background-color: #f0f">Block S</div>
+            <div v-else style="background-color: #00f;">Block C</div>
+          </div>
+        </h4>
+    </div>
+    </h3>
+    
+    <h3>
+    <div id='app3'></div>
 
-<div id="app2">
-  <h4>Count: {{ count }}</h4>
-  <button v-on:click="count++">Plus</button>
-  <button v-on:click="count = 0">Reset</button>
+    <div id="app4">    
+          <p>
+            <span>Multiline message is:</span> {{ message }}
+          </p>
+         <textarea v-model="message" placeholder="add multiple lines"></textarea>
+    </div>
+
+    <div id="app5">
+      <!-- 注意下面 input 對應的都是 v-model="checkedNames"  -->
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+      <label for="jack">Jack</label>
   
-  <div class="wrap" style="color :#ffff">
-    <div v-if="count === 0" style="background-color: #f00;">Block A</div>
-    <div v-else-if="count < 5" style="background-color: green">Block B</div>
-    <div v-else-if="count < 15" style="background-color: #f0f">Block S</div>
-    <div v-else style="background-color: #00f;">Block C</div>
-  </div>
-</div>
+      <input type="checkbox" id="john" value="John" v-model="checkedNames">
+      <label for="john">John</label>
+  
+      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+      <label for="mike">Mike</label>
+  
+      <input type="checkbox" id="mary" value="Mary" v-model="checkedNames">
+      <label for="mary">Mary</label>
 
-<div id='app3'>
+      <br>
+      <p>Checked names: {{ checkedNames }}</p>
+    </div>
 
-</div>
+    
+    </h3>
 
+</h2>

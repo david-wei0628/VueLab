@@ -3,11 +3,16 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<br></br>
 
 <div id="app">
     <p>Count: {{ count }}</p>
     <button v-on:click="plus">
         Click Me
     </button>
+</div>
+
+<div id="app6">
+        <h3>{{msg}}</h3>
+        <my-component v-bind:parent-msg="msg"></my-component>
 </div>
