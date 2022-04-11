@@ -22,6 +22,10 @@ namespace VueLab.Controllers
         {
             return View();
         }
+        public IActionResult Component()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
