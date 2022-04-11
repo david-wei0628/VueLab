@@ -67,3 +67,4 @@ vm6.component('my-component', {
 });
 
 vm6.mount('#app6');
+

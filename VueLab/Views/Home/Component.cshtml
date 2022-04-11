@@ -4,3 +4,22 @@
 <h1>@ViewData["Title"]</h1>
 
 <br></br>
+
+<div id="Comapp">
+    <h2>
+        {{msg}}
+    </h2>
+    <custom-component>
+        {{msg}}
+    </custom-component>
+</div>
+
+<div id="Com2" >
+    <button v-on:click="isShow =! isShow">Toggle</button>
+    <div>
+        <transition name="fade">
+            <div class="block" v-if="isSohw">Ponk</div>
+            <div class="block" v-else>Bonk</div>
+        </transition>
+    </div>
+</div>
