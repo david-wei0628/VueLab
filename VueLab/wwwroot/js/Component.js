@@ -20,14 +20,12 @@ ComVm.component('custom-component', {
         }
     }
 });
-
 ComVm.mount('#Comapp');
-
 
 const ComVm2 = Vue.createApp({
     data() {
         return {
-            isShow: true
+            isShow: false
         }
     }
 }).mount('#Comapp2');

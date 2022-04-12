@@ -14,12 +14,20 @@
     </custom-component>
 </div>
 
-<div id="Com2" >
-    <button v-on:click="isShow =! isShow">Toggle</button>
+<div id="Comapp2" >
+    @*<button v-on:click="isShow =! isShow">Toggle</button>
     <div>
         <transition name="fade">
+            <div class="block" v-show="isShow">
             <div class="block" v-if="isSohw">Ponk</div>
-            <div class="block" v-else>Bonk</div>
+            <div class="block" v-else>Bonk</div></div>
         </transition>
-    </div>
+    </div>*@
+    <div style="height: 120px;">
+    <transition>
+      <div class="block" v-show="isShow">HELLO VUE</div>
+    </transition>
+  </div>
+
+  <button v-on:click="isShow =! isShow">Toggle</button>
 </div>
