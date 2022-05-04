@@ -29,3 +29,12 @@ const ComVm2 = Vue.createApp({
         }
     }
 }).mount('#Comapp2');
+
+
+const ComVm3 = Vue.createApp({
+    data() {
+        return {
+            isShow: false
+        }
+    }
+}).mount('#Comapp3');

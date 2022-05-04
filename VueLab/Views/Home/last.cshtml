@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Last page";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<div id="Comapp2" >
+    <button v-on:click="isShow =! isShow">try</button>
+    {{isShow}}
+    <div>
+        <transition name="cat" class="block">
+            <div v-show="isShow">
+                <div v-if="isShow">Ponk</div>
+                <div v-else>Bonk</div>
+            </div>
+       </transition>
+    </div>
+</div>

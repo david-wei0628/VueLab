@@ -3,7 +3,7 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<br></br>
+<br/>
 
 <div id="Comapp">
     <h2>
@@ -15,19 +15,23 @@
 </div>
 
 <div id="Comapp2" >
-    @*<button v-on:click="isShow =! isShow">Toggle</button>
+    {{isShow}}
+    <button v-on:click="isShow =! isShow">Toggle</button>
+    {{isShow}}
     <div>
         <transition name="fade">
             <div class="block" v-show="isShow">
             <div class="block" v-if="isSohw">Ponk</div>
-            <div class="block" v-else>Bonk</div></div>
+            <div class="block" v-else>Bonk</div>
+        </div>
         </transition>
-    </div>*@
-    <div style="height: 120px;">
-    <transition>
+    </div>
+</div>
+
+    @*<div style="height: 120px;">
+    <transition name="fade">
       <div class="block" v-show="isShow">HELLO VUE</div>
     </transition>
   </div>
 
-  <button v-on:click="isShow =! isShow">Toggle</button>
-</div>
+  <button v-on:click="isShow =! isShow">Toggle</button>*@

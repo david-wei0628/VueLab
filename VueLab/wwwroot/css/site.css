@@ -20,7 +20,7 @@ body {
 
 h3 {
     font-size: 16px;
-    border: 2px white solid;
+    border: 2px black solid;
     overflow: hidden;
 }
 
@@ -39,7 +39,9 @@ h5 {
     overflow: auto;
 }
 
-#Comapp {
+
+
+/*#Comapp {
     position: relative;
     display: block;
     padding: 1rem;
@@ -48,7 +50,7 @@ h5 {
 button {
     font-size: 1rem;
     margin-bottom: 1rem;
-}
+}*/
 
 .block {
     display: block;
@@ -71,5 +73,20 @@ button {
 
 .fade-enter-to,
 .fade-leave-from {
+    opacity: 1;
+}
+
+.cat-enter-active,
+.cat-leave-active {
+    transition: opacity 2s;
+}
+
+.cat-enter-from,
+.cat-leave-to {
+    opacity: 0;
+}
+
+.cat-enter-to,
+.cat-leave-from {
     opacity: 1;
 }
